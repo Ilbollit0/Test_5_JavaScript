@@ -1,2 +1,2 @@
 # Test_5_JavaScript
-Quinto test javascript dell'inizio della terza settimana del corso EPICODE.
+Compito di JavaScript sugli argomenti della lezione di oggi: arrow function, destructuring, spread e rest, e i metodi degli array (forEach, map, filter, find, reduce, sort).
