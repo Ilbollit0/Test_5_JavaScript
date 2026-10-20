@@ -7,54 +7,54 @@
 */
 
 const utenti = [
-	{
-		id: 1,
-		nome: 'Antonio',
-		cognome: 'Rossi',
-		eta: 28,
-		attivo: true,
-		città: 'Milano',
-	},
-	{
-		id: 2,
-		nome: 'Anna',
-		cognome: 'Bianchi',
-		eta: 35,
-		attivo: false,
-		città: 'Roma',
-	},
-	{
-		id: 3,
-		nome: 'Luca',
-		cognome: 'Verdi',
-		eta: 17,
-		attivo: true,
-		città: 'Milano',
-	},
-	{
-		id: 4,
-		nome: 'Sara',
-		cognome: 'Neri',
-		eta: 17,
-		attivo: true,
-		città: 'Torino',
-	},
-	{
-		id: 5,
-		nome: 'Marco',
-		cognome: 'Gialli',
-		eta: 45,
-		attivo: false,
-		città: 'Roma',
-	},
-	{
-		id: 6,
-		nome: 'Chiara',
-		cognome: 'Rosa',
-		eta: 30,
-		attivo: true,
-		città: 'Milano',
-	},
+  {
+    id: 1,
+    nome: "Antonio",
+    cognome: "Rossi",
+    eta: 28,
+    attivo: true,
+    città: "Milano",
+  },
+  {
+    id: 2,
+    nome: "Anna",
+    cognome: "Bianchi",
+    eta: 35,
+    attivo: false,
+    città: "Roma",
+  },
+  {
+    id: 3,
+    nome: "Luca",
+    cognome: "Verdi",
+    eta: 17,
+    attivo: true,
+    città: "Milano",
+  },
+  {
+    id: 4,
+    nome: "Sara",
+    cognome: "Neri",
+    eta: 17,
+    attivo: true,
+    città: "Torino",
+  },
+  {
+    id: 5,
+    nome: "Marco",
+    cognome: "Gialli",
+    eta: 45,
+    attivo: false,
+    città: "Roma",
+  },
+  {
+    id: 6,
+    nome: "Chiara",
+    cognome: "Rosa",
+    eta: 30,
+    attivo: true,
+    città: "Milano",
+  },
 ];
 
 /* ESERCIZIO 1 — Arrow function compatta
@@ -72,7 +72,7 @@ console.log(quadrato(5));
    Stampa le 3 variabili.
 */
 
-const persona = { nome: 'Mario', cognome: 'Rossi', eta: 25, città: 'Roma' };
+const persona = { nome: "Mario", cognome: "Rossi", eta: 25, città: "Roma" };
 const { nome, cognome, eta } = persona;
 console.log(nome, cognome, eta);
 
@@ -82,7 +82,8 @@ console.log(nome, cognome, eta);
    Chiamala su utenti[0], utenti[1], utenti[2] e stampa i 3 risultati.
 */
 
-const riepilogo = ({ nome, cognome, eta }) => `${nome} ${cognome} (${eta} anni)`;
+const riepilogo = ({ nome, cognome, eta }) =>
+  `${nome} ${cognome} (${eta} anni)`;
 console.log(riepilogo(utenti[0]), riepilogo(utenti[1]), riepilogo(utenti[2]));
 
 /* ESERCIZIO 4 — Spread su array
@@ -102,8 +103,8 @@ console.log(numeri, copia);
    Crea cibo che li unisca con spread. Stampalo.
 */
 
-const frutti = ['mela', 'banana'];
-const verdure = ['carota', 'spinaci'];
+const frutti = ["mela", "banana"];
+const verdure = ["carota", "spinaci"];
 const cibo = [...frutti, ...verdure];
 console.log(cibo);
 
@@ -113,7 +114,7 @@ console.log(cibo);
    Stampa il nuovo oggetto.
 */
 
-const prodotto = { nome: 'Cuffie', prezzo: 79.99 };
+const prodotto = { nome: "Cuffie", prezzo: 79.99 };
 console.log({ ...prodotto, disponibile: true });
 
 /* ESERCIZIO 7 — forEach
@@ -121,7 +122,9 @@ console.log({ ...prodotto, disponibile: true });
    Esempio: "- Mario Rossi (Milano)"
 */
 
-utenti.forEach(({ nome, cognome, città }) => console.log(`- ${nome} ${cognome} (${città})`));
+utenti.forEach(({ nome, cognome, città }) =>
+  console.log(`- ${nome} ${cognome} (${città})`),
+);
 
 /* ESERCIZIO 8 — map a stringhe
    Usa map per creare nomiCompleti = ["Mario Rossi", "Anna Bianchi", ...].
@@ -139,7 +142,10 @@ console.log(nomiCompleti);
    Stampa il primo elemento di utentiPlus.
 */
 
-const utentiPlus = utenti.map((u) => ({ ...u, descrizione: `${u.nome} ${u.cognome}, ${u.città}` }));
+const utentiPlus = utenti.map((u) => ({
+  ...u,
+  descrizione: `${u.nome} ${u.cognome}, ${u.città}`,
+}));
 console.log(utentiPlus[0]);
 
 /* ESERCIZIO 10 — filter attivi
@@ -154,19 +160,17 @@ console.log(utenti.filter((u) => u.attivo));
    Stampa l'array risultante.
 */
 
-console.log(utenti.filter((u) => u.eta >= 18 && u.città === 'Milano'));
+console.log(utenti.filter((u) => u.eta >= 18 && u.città === "Milano"));
 
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
    Stampa l'oggetto.
 */
 
-
 /* ESERCIZIO 13 — reduce
    a) Usa reduce per calcolare l'età media (somma età / numero utenti). Stampa.
    b) Usa reduce per contare il numero di utenti attivi. Stampa.
 */
-
 
 /* ESERCIZIO 14 — sort
    a) Ordina gli utenti per eta crescente. Stampa l'array di nomi nell'ordine.
